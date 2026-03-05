@@ -1,6 +1,6 @@
 import streamlit as st
-import joblib
 import pandas as pd
+import joblib
 
 # Load trained model
 model = joblib.load("model.pkl")
@@ -50,4 +50,5 @@ if st.button("Predict Price"):
     prediction = model.predict(input_data)[0]
 
     st.success(f"💰 Estimated Laptop Price: ₹ {int(prediction):,}")
+
 
